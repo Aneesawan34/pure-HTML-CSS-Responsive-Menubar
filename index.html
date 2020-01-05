@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".menuToggleButton").click(function(){
+                $(".navbarTwo").slideToggle("slow");
+            });
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>menu website</title>
+    <style>
+        #menu{
+            display: flex;
+            padding: 10px 0px;
+            align-items: center;
+            background-color:#E25D33;
+        }
+        .menuHeading{
+            padding-right: 15px;
+            }
+        @media all and (max-width: 500px){
+            #menu{
+                flex-direction: column;
+                align-items:stretch;
+
+            }
+        }
+        .logo{
+            flex: 1;
+            padding-left: 15px;
+        }
+        @media all and (max-width: 500px){
+            .logo{
+                width: 100%;
+                text-align: center;
+                padding-left: 0px;
+            }
+        }
+        .menuToggleButton{
+            display: none;
+        }
+        @media all and (max-width: 500px){
+            .menuToggleButton{
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+            .menuToggleButton:hover{
+                cursor: pointer;
+            }
+        }
+        .navbar{
+            display: flex;
+            flex:3;
+            list-style: none;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .navbarTwo{
+            display: none;
+        }
+        @media all and (max-width: 900px){
+            .navbar{
+                justify-content: center;
+            }
+        }
+        @media all and (max-width: 500px){
+            .navbar{
+                display: none;
+            }
+            .navbarTwo{
+            list-style: none;
+                width: 100%;
+            }
+            .item{
+            align-self: center;
+            border: 2px solid blue;
+            flex: 1;
+            font-size: 20px;
+            padding: 10px 10px;
+        }
+        }
+        .item{
+            width: 100%;
+            font-size: 20px;
+            padding: 10px 10px;
+        }
+        @media all and (max-width: 900px){
+            .item{
+                padding: 5px 5px;
+            }
+        }
+        a{
+            text-decoration: none;
+            color: #FEFFF8;
+            font-size: 20px;
+        }
+        @media all and (max-width: 900px){
+            a{
+                font-size: 15px;
+            }
+        }
+        @media all and (max-width: 600px){
+            a{
+                font-size: 13px;
+            }
+        }
+        @media all and (max-width:500px){
+            .menuToggleItem{
+                margin: 7px 0px; 
+                padding-bottom: 3px; 
+                border-bottom: 1px solid #E9C92D;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <div class="logo">
+            <img 
+            style="width:80px; height:80px"
+            src="./images//instagram.png"
+            />
+        </div>
+        <div class="menuToggleButton">
+            <div style="display: flex; align-items: center;">
+                <h2 class="menuHeading">Menu</h2>
+                <div
+                    style="width: 20px; height: 20px;"
+                >
+                    <img
+                    style="width: 20px; height: 20px;"
+                    src="./images/drop-down-arrow.png"
+                    />
+                </div
+                >
+            </div>
+            <div class="navbarTwo">
+                <ul style="
+                padding: 0px;
+                list-style:none;
+                display:flex; 
+                flex-direction: column;
+                align-items: center;
+                ">
+                    <li class="menuToggleItem">
+                        <a style="font-size: 20px;">
+                            Home
+                        </a>
+                    </li>
+                    <li  class="menuToggleItem">
+                        <a style="font-size: 20px;">
+                            About
+                        </a>
+                    </li >
+                    <li class="menuToggleItem">
+                        <a style="font-size: 20px;">
+                            Services
+                        </a>
+                    </li>
+                    <li class="menuToggleItem">
+                        <a style="font-size: 20px;">
+                            Products
+                        </a>
+                    </li>
+                    <li class="menuToggleItem">
+                        <a style="font-size: 20px;">
+                            Contact us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="navbar">
+            <li class="item">
+                <a href="#">
+                    Home
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    About
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    Services
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    Products
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    Contact us
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
